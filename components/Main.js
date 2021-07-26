@@ -151,9 +151,9 @@ const HomeNavigator = createStackNavigator(
   {
     defaultNavigationOptions: ({ navigation }) => ({
       headerStyle: {
-        backgroundColor: "#5637DD",
+        backgroundColor: "lightgrey",
       },
-      headerTintColor: "#fff",
+      headerTintColor: "green",
       headerTitleStyle: {
         color: "#fff",
       },
@@ -233,7 +233,7 @@ const CustomDrawerContentComponent = (props) => (
           />
         </View>
         <View style={{ flex: 2 }}>
-          <Text style={styles.drawerHeaderText}>NuCamp</Text>
+          <Text style={styles.drawerHeaderText}>Exotic Imports</Text>
         </View>
       </View>
       <DrawerItems {...props} />
@@ -321,7 +321,7 @@ const MainNavigator = createDrawerNavigator(
   },
   {
     initialRouteName: "Home",
-    drawerBackgroundColor: "#CEC8FF",
+    drawerBackgroundColor: "darkgray",
     contentComponent: CustomDrawerContentComponent,
   }
 );
@@ -395,7 +395,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   drawerHeader: {
-    backgroundColor: "#5637DD",
+    backgroundColor: "black",
     height: 140,
     alignItems: "center",
     justifyContent: "center",
@@ -403,7 +403,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   drawerHeaderText: {
-    color: "#fff",
+    color: "orange",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -414,10 +414,9 @@ const styles = StyleSheet.create({
   },
   stackIcon: {
     marginLeft: 10,
-    color: "#fff",
+    color: "orange",
     fontSize: 24,
   },
 });
 
 export default Main;
-// connect(null, mapDispatchToProps)(
