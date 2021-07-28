@@ -8,6 +8,7 @@ const FadeInView = (props) => {
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 5000,
+      useNativeDriver: true,
     }).start();
   }, [fadeAnim]);
 
@@ -26,10 +27,10 @@ const FadeInView = (props) => {
 const Home = () => {
   return (
     <View style={styles.container}>
-      <FadeInView style={{ width: 250, height: 50 }}>
+      <FadeInView>
         <Text>Home</Text>
         <Image source={require("../assets/images/Layer-15-min.jpg")} />
-        <Text>
+        <Text style={styles.text}>
           Welcome to Exotic Imports Our commitment to excellence and innovation
           underpins everything we do: from the performance of the Formula One™
           team on race day to the ownership experience we offer Sportscars &
@@ -46,6 +47,10 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "black",
+  },
+  text: {
+    color: "lightgrey",
   },
   img: {
     padding: 30,
