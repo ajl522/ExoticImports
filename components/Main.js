@@ -4,9 +4,6 @@ import Home from "./Home";
 // import Contact from "./ContactComponent";
 // import Directory from "./DirectoryComponent";
 // import CarInfo from "./CarInfo";
-// import Reservation from "./ReservationComponent";
-// import Favorites from "./FavoritesComponent";
-// import Login from "./LoginComponent";
 import Constants from "expo-constants";
 import {
   View,
@@ -23,95 +20,6 @@ import { createDrawerNavigator, DrawerItems } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation";
 import { Icon } from "react-native-elements";
 import SafeAreaView from "react-native-safe-area-view";
-// import { connect } from "react-redux";
-// import {
-//   fetchCampsites,
-//   fetchComments,
-//   fetchPromotions,
-//   fetchPartners,
-// } from "../redux/ActionCreators";
-// import NetInfo from "@react-native-community/netinfo";
-
-// const mapDispatchToProps = {
-//   fetchCampsites,
-//   fetchComments,
-//   fetchPromotions,
-//   fetchPartners,
-// };
-
-// const LoginNavigator = createStackNavigator(
-//   {
-//     Login: { screen: Login },
-//   },
-//   {
-//     defaultNavigationOptions: ({ navigation }) => ({
-//       headerStyle: {
-//         backgroundColor: "#5637DD",
-//       },
-//       headerTintColor: "#fff",
-//       headerTitleStyle: {
-//         color: "#fff",
-//       },
-//       headerLeft: (
-//         <Icon
-//           name="sign-in"
-//           type="font-awesome"
-//           iconStyle={styles.stackIcon}
-//           onPress={() => navigation.toggleDrawer()}
-//         />
-//       ),
-//     }),
-//   }
-// );
-
-// const ReservationNavigator = createStackNavigator(
-//   {
-//     Reservation: { screen: Reservation },
-//   },
-//   {
-//     defaultNavigationOptions: ({ navigation }) => ({
-//       headerStyle: {
-//         backgroundColor: "#5637DD",
-//       },
-//       headerTintColor: "#fff",
-//       headerTitleStyle: {
-//         color: "#fff",
-//       },
-//       headerLeft: (
-//         <Icon
-//           name="tree"
-//           type="font-awesome"
-//           iconStyle={styles.stackIcon}
-//           onPress={() => navigation.toggleDrawer()}
-//         />
-//       ),
-//     }),
-//   }
-// );
-// const FavoritesNavigator = createStackNavigator(
-//   {
-//     Favorites: { screen: Favorites },
-//   },
-//   {
-//     defaultNavigationOptions: ({ navigation }) => ({
-//       headerStyle: {
-//         backgroundColor: "#5637DD",
-//       },
-//       headerTintColor: "#fff",
-//       headerTitleStyle: {
-//         color: "#fff",
-//       },
-//       headerLeft: (
-//         <Icon
-//           name="heart"
-//           type="font-awesome"
-//           iconStyle={styles.stackIcon}
-//           onPress={() => navigation.toggleDrawer()}
-//         />
-//       ),
-//     }),
-//   }
-// );
 
 // const DirectoryNavigator = createStackNavigator(
 //   {
@@ -194,31 +102,6 @@ const HomeNavigator = createStackNavigator(
 //   }
 // );
 
-// const ContactNavigator = createStackNavigator(
-//   {
-//     Contact: { screen: Contact },
-//   },
-//   {
-//     defaultNavigationOptions: ({ navigation }) => ({
-//       headerStyle: {
-//         backgroundColor: "#5637DD",
-//       },
-//       headerTintColor: "#fff",
-//       headerTitleStyle: {
-//         color: "#fff",
-//       },
-//       headerLeft: (
-//         <Icon
-//           name="address-card"
-//           type="font-awesome"
-//           iconStyle={styles.stackIcon}
-//           onPress={() => navigation.toggleDrawer()}
-//         />
-//       ),
-//     }),
-//   }
-// );
-
 const CustomDrawerContentComponent = (props) => (
   <ScrollView>
     <SafeAreaView
@@ -228,7 +111,7 @@ const CustomDrawerContentComponent = (props) => (
       <View style={styles.drawerHeader}>
         <View style={{ flex: 1 }}>
           <Image
-            // source={require("./images/logo.png")}
+            source={require("../assets/images/Layer-15-min.jpg")}
             style={styles.drawerImage}
           />
         </View>
@@ -272,24 +155,7 @@ const MainNavigator = createDrawerNavigator(
     //     ),
     //   },
     // },
-    // Reservation: {
-    //   screen: ReservationNavigator,
-    //   navigationOptions: {
-    //     drawerLabel: "Reserve Campsite",
-    //     drawerIcon: ({ tintColor }) => (
-    //       <Icon name="tree" type="font-awesome" size={24} color={tintColor} />
-    //     ),
-    //   },
-    // },
-    // Favorites: {
-    //   screen: FavoritesNavigator,
-    //   navigationOptions: {
-    //     drawerLabel: "My Favorites",
-    //     drawerIcon: ({ tintColor }) => (
-    //       <Icon name="heart" type="font-awesome" size={24} color={tintColor} />
-    //     ),
-    //   },
-    // },
+    //
     // About: {
     //   screen: AboutUs,
     //   navigationOptions: {
@@ -304,20 +170,7 @@ const MainNavigator = createDrawerNavigator(
     //     ),
     //   },
     // },
-    // Contact: {
-    //   screen: ContactNavigator,
-    //   navigationOptions: {
-    //     drawerLabel: "Contact Us",
-    //     drawerIcon: ({ tintColor }) => (
-    //       <Icon
-    //         name="address-card"
-    //         type="font-awesome"
-    //         size={24}
-    //         color={tintColor}
-    //       />
-    //     ),
-    //   },
-    // },
+    //
   },
   {
     initialRouteName: "Home",
@@ -329,53 +182,6 @@ const MainNavigator = createDrawerNavigator(
 const AppNavigator = createAppContainer(MainNavigator);
 
 class Main extends Component {
-  // componentDidMount() {
-  //   // this.props.fetchCampsites();
-  //   // this.props.fetchComments();
-  //   // this.props.fetchPromotions();
-  //   // this.props.fetchPartners();
-
-  //   showNetInfo = async () => {
-  //     const connectionInfo = await NetInfo.fetch();
-
-  //     Platform.OS === "ios"
-  //       ? Alert.alert("Initial Network Connectivity Type:", connectionInfo.type)
-  //       : ToastAndroid.show(
-  //           "Initial Network Connectivity Type:" + connectionInfo.type,
-  //           ToastAndroid.LONG
-  //         );
-  //   };
-
-  //   this.unsubscribeNetInfo = NetInfo.addEventListener((connectionInfo) => {
-  //     this.handleConnectivityChange(connectionInfo);
-  //   });
-  // }
-
-  // componentWillUnmount() {
-  //   this.unsubscribeNetInfo();
-  // }
-
-  // handleConnectivityChange = (connectionInfo) => {
-  //   let connnectionMsg = "You are now connected to an active network.";
-  //   switch (connectionInfo.type) {
-  //     case "none":
-  //       connnectionMsg = "No network connection is active.";
-  //       break;
-  //     case "unknown":
-  //       connnectionMsg = "The network connection is unknown.";
-  //       break;
-  //     case "cellular":
-  //       connnectionMsg = "You are now connected to a cellular network.";
-  //       break;
-  //     case "wifi":
-  //       connnectionMsg = "You are now connected to a WiFi network.";
-  //       break;
-  //   }
-  //   Platform.OS === "ios"
-  //     ? Alert.alert("Connection change:", connnectionMsg)
-  //     : ToastAndroid.show(connnectionMsg, ToastAndroid.LONG);
-  // };
-
   render() {
     return (
       <View
@@ -414,7 +220,7 @@ const styles = StyleSheet.create({
   },
   stackIcon: {
     marginLeft: 10,
-    color: "orange",
+    color: "black",
     fontSize: 24,
   },
 });
