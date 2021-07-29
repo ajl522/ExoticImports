@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Home from "./Home";
 import About from "./About";
-// import Contact from "./ContactComponent";
-// import Inventory from "./InventoryComponent";
-// import CarInfo from "./CarInfo";
+import Inventory from "./Inventory";
+import CarInfo from "./CarInfo";
 import Constants from "expo-constants";
 import {
   View,
@@ -21,36 +20,36 @@ import { createAppContainer } from "react-navigation";
 import { Icon } from "react-native-elements";
 import SafeAreaView from "react-native-safe-area-view";
 
-// const InventoryNavigator = createStackNavigator(
-//   {
-//     Inventory: {
-//       screen: Inventory,
-//       navigationOptions: ({ navigation }) => ({
-//         headerLeft: (
-//           <Icon
-//             name="list"
-//             type="font-awesome"
-//             iconStyle={styles.stackIcon}
-//             onPress={() => navigation.toggleDrawer()}
-//           />
-//         ),
-//       }),
-//     },
-//     CampsiteInfo: { screen: CampsiteInfo },
-//   },
-//   {
-//     initialRouteName: "Directory",
-//     defaultNavigationOptions: {
-//       headerStyle: {
-//         backgroundColor: "#5637DD",
-//       },
-//       headerTintColor: "#fff",
-//       headerTitleStyle: {
-//         color: "#fff",
-//       },
-//     },
-//   }
-// );
+const InventoryNavigator = createStackNavigator(
+  {
+    Inventory: {
+      screen: Inventory,
+      navigationOptions: ({ navigation }) => ({
+        headerLeft: (
+          <Icon
+            name="list"
+            type="font-awesome"
+            iconStyle={styles.stackIcon}
+            onPress={() => navigation.toggleDrawer()}
+          />
+        ),
+      }),
+    },
+    CarInfo: { screen: CarInfo },
+  },
+  {
+    initialRouteName: "Inventory",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "grey",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
+);
 
 const HomeNavigator = createStackNavigator(
   {
@@ -135,15 +134,15 @@ const MainNavigator = createDrawerNavigator(
         ),
       },
     },
-    // Inventory: {
-    //   screen: InventoryNavigator,
-    //   navigationOptions: {
-    //     drawerIcon: ({ tintColor }) => (
-    //       <Icon name="list" type="font-awesome" size={24} color={tintColor} />
-    //     ),
-    //   },
-    // },
-    //
+    Inventory: {
+      screen: InventoryNavigator,
+      navigationOptions: {
+        drawerIcon: ({ tintColor }) => (
+          <Icon name="list" type="font-awesome" size={24} color={tintColor} />
+        ),
+      },
+    },
+    
     About: {
       screen: About,
       navigationOptions: {
