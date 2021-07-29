@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Home from "./Home";
-// import About from "./About";
+import About from "./About";
 // import Contact from "./ContactComponent";
 // import Directory from "./DirectoryComponent";
 // import CarInfo from "./CarInfo";
@@ -77,30 +77,30 @@ const HomeNavigator = createStackNavigator(
   }
 );
 
-// const AboutNavigator = createStackNavigator(
-//   {
-//     About: { screen: About },
-//   },
-//   {
-//     defaultNavigationOptions: ({ navigation }) => ({
-//       headerStyle: {
-//         backgroundColor: "#5637DD",
-//       },
-//       headerTintColor: "#fff",
-//       headerTitleStyle: {
-//         color: "#fff",
-//       },
-//       headerLeft: (
-//         <Icon
-//           name="info-circle"
-//           type="font-awesome"
-//           iconStyle={styles.stackIcon}
-//           onPress={() => navigation.toggleDrawer()}
-//         />
-//       ),
-//     }),
-//   }
-// );
+const AboutNavigator = createStackNavigator(
+  {
+    About: { screen: About },
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      headerStyle: {
+        backgroundColor: "#5637DD",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+      headerLeft: (
+        <Icon
+          name="info-circle"
+          type="font-awesome"
+          iconStyle={styles.stackIcon}
+          onPress={() => navigation.toggleDrawer()}
+        />
+      ),
+    }),
+  }
+);
 
 const CustomDrawerContentComponent = (props) => (
   <ScrollView>
@@ -126,19 +126,7 @@ const CustomDrawerContentComponent = (props) => (
 
 const MainNavigator = createDrawerNavigator(
   {
-    // Login: {
-    //   screen: LoginNavigator,
-    //   navigationOptions: {
-    //     drawerIcon: ({ tintColor }) => (
-    //       <Icon
-    //         name="sign-in"
-    //         type="font-awesome"
-    //         size={24}
-    //         color={tintColor}
-    //       />
-    //     ),
-    //   },
-    // },
+   
     Home: {
       screen: Home,
       navigationOptions: {
@@ -156,21 +144,21 @@ const MainNavigator = createDrawerNavigator(
     //   },
     // },
     //
-    // About: {
-    //   screen: AboutUs,
-    //   navigationOptions: {
-    //     drawerLabel: "About Us",
-    //     drawerIcon: ({ tintColor }) => (
-    //       <Icon
-    //         name="info-circle"
-    //         type="font-awesome"
-    //         size={24}
-    //         color={tintColor}
-    //       />
-    //     ),
-    //   },
-    // },
-    //
+    About: {
+      screen: About,
+      navigationOptions: {
+        drawerLabel: "About Us",
+        drawerIcon: ({ tintColor }) => (
+          <Icon
+            name="info-circle"
+            type="font-awesome"
+            size={24}
+            color={tintColor}
+          />
+        ),
+      },
+    },
+    
   },
   {
     initialRouteName: "Home",
