@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Home from "./Home";
 import About from "./About";
 // import Contact from "./ContactComponent";
-// import Directory from "./DirectoryComponent";
+// import Inventory from "./InventoryComponent";
 // import CarInfo from "./CarInfo";
 import Constants from "expo-constants";
 import {
@@ -21,10 +21,10 @@ import { createAppContainer } from "react-navigation";
 import { Icon } from "react-native-elements";
 import SafeAreaView from "react-native-safe-area-view";
 
-// const DirectoryNavigator = createStackNavigator(
+// const InventoryNavigator = createStackNavigator(
 //   {
-//     Directory: {
-//       screen: Directory,
+//     Inventory: {
+//       screen: Inventory,
 //       navigationOptions: ({ navigation }) => ({
 //         headerLeft: (
 //           <Icon
@@ -135,8 +135,8 @@ const MainNavigator = createDrawerNavigator(
         ),
       },
     },
-    // Directory: {
-    //   screen: DirectoryNavigator,
+    // Inventory: {
+    //   screen: InventoryNavigator,
     //   navigationOptions: {
     //     drawerIcon: ({ tintColor }) => (
     //       <Icon name="list" type="font-awesome" size={24} color={tintColor} />
