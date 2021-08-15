@@ -125,7 +125,6 @@ const CustomDrawerContentComponent = (props) => (
 
 const MainNavigator = createDrawerNavigator(
   {
-   
     Home: {
       screen: Home,
       navigationOptions: {
@@ -142,7 +141,7 @@ const MainNavigator = createDrawerNavigator(
         ),
       },
     },
-    
+
     About: {
       screen: About,
       navigationOptions: {
@@ -157,7 +156,6 @@ const MainNavigator = createDrawerNavigator(
         ),
       },
     },
-    
   },
   {
     initialRouteName: "Home",
