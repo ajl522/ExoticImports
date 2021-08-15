@@ -7,11 +7,14 @@ function RenderCar(props) {
   const { car } = props;
 
   if (car) {
+    var image2 =
+      car.id === 0
+        ? require("../assets/images/Artura/2.jpg")
+        : require("../assets/images/Vantage/1.jpg") && car.id === 1
+        ? require("../assets/images/Gemera/1.jpg")
+        : require("../assets/images/Vantage/1.jpg");
     return (
-      <Card
-        featuredTitle={car.name}
-        image={require("../assets/images/Vantage/1.jpg")}
-      >
+      <Card featuredTitle={car.name} image={image2}>
         <Text style={{ margin: 10 }}>{car.description}</Text>
         <Icon
           name={props.favorite ? "heart" : "heart-o"}
