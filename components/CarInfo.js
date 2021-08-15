@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, ScrollView } from "react-native";
 import { CARS } from "../shared/cars";
 import { Card, Icon } from "react-native-elements";
+import Carousel from "react-native-snap-carousel";
 
 function RenderCar(props) {
   const { car } = props;
