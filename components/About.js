@@ -19,10 +19,14 @@ class About extends Component {
 
   render() {
     return (
-      <ScrollView style={{backgroundColor: 'grey'}} >
+      <ScrollView style={{ backgroundColor: "grey" }}>
         <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
           <Card>
-            <Text>We welcome you to browse our online inventory, learn a little more about Exotic Imports, set up a test drive or contact us at any time for more information. Stop in to see us.</Text>
+            <Text>
+              We welcome you to browse our online inventory, learn a little more
+              about Exotic Imports, set up a test drive or contact us at any
+              time for more information. Stop in to see us.
+            </Text>
           </Card>
           <Card title="Contact Information" wrapperStyle={{ margin: 20 }}>
             <Text>123 Exotic Ave</Text>

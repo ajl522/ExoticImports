@@ -41,11 +41,11 @@ const InventoryNavigator = createStackNavigator(
     initialRouteName: "Inventory",
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "grey",
+        backgroundColor: "lightgrey",
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
-        color: "#fff",
+        color: "black",
       },
     },
   }
@@ -60,9 +60,9 @@ const HomeNavigator = createStackNavigator(
       headerStyle: {
         backgroundColor: "lightgrey",
       },
-      headerTintColor: "green",
+      headerTintColor: "#fff",
       headerTitleStyle: {
-        color: "#fff",
+        color: "black",
       },
       headerLeft: (
         <Icon
@@ -83,11 +83,11 @@ const AboutNavigator = createStackNavigator(
   {
     defaultNavigationOptions: ({ navigation }) => ({
       headerStyle: {
-        backgroundColor: "#5637DD",
+        backgroundColor: "lightgrey",
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
-        color: "#fff",
+        color: "black",
       },
       headerLeft: (
         <Icon
@@ -126,8 +126,9 @@ const CustomDrawerContentComponent = (props) => (
 const MainNavigator = createDrawerNavigator(
   {
     Home: {
-      screen: Home,
+      screen: HomeNavigator,
       navigationOptions: {
+        drawerLabel: "Home",
         drawerIcon: ({ tintColor }) => (
           <Icon name="home" type="font-awesome" size={24} color={tintColor} />
         ),
@@ -136,6 +137,7 @@ const MainNavigator = createDrawerNavigator(
     Inventory: {
       screen: InventoryNavigator,
       navigationOptions: {
+        drawerLabel: "Inventory",
         drawerIcon: ({ tintColor }) => (
           <Icon name="list" type="font-awesome" size={24} color={tintColor} />
         ),
@@ -143,7 +145,7 @@ const MainNavigator = createDrawerNavigator(
     },
 
     About: {
-      screen: About,
+      screen: AboutNavigator,
       navigationOptions: {
         drawerLabel: "About Us",
         drawerIcon: ({ tintColor }) => (
