@@ -7,3 +7,7 @@
 <img width="391" alt="Screen Shot 2021-07-29 at 10 39 11 AM" src="https://user-images.githubusercontent.com/75144406/127511980-7999313b-20fe-41c6-bf93-69eb607c212c.png">
 
 ![image](https://user-images.githubusercontent.com/75144406/129483373-e6310f6c-eb5f-42b3-a26a-281a1cc3a7c2.png)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0d296edfcc35532f797f3c4a4caa31fb11db0850
