@@ -8,7 +8,10 @@ function RenderCar(props) {
 
   if (car) {
     return (
-      <Card featuredTitle={car.name} image={car.image}>
+      <Card
+        featuredTitle={car.name}
+        image={require("../assets/images/Vantage/1.jpg")}
+      >
         <Text style={{ margin: 10 }}>{car.description}</Text>
         <Icon
           name={props.favorite ? "heart" : "heart-o"}

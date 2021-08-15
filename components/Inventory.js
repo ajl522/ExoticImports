@@ -23,7 +23,7 @@ class Inventory extends Component {
           title={item.name}
           onPress={() => navigate("CarInfo", { carId: item.id })}
           leftAvatar={{
-            source: { uri: item.image },
+            source: item.image && require("../assets/images/Vantage/1.jpg"),
           }}
         />
       );

@@ -6,7 +6,7 @@ export const CARS = [
     elevation: 1233,
     featured: false,
     description:
-      "The Artura is based on the all-new McLaren Carbon Fibre Lightweight Architecture (MCLA). This innovativefoundation hosts the new super-light McLaren V6 twin tubocharged petrol engine. Working inharmony with a power dense, compact E-Motor. The 8-Speed Seamless Shift Gearbox has no need fora heavy, space wasting reverse ratio it uses electric power instead. Innovation flows from nose to tail.THE COCKPITNext-generation driver focus. Advanced construction and modern craftsmanship.Innovative technology. Artura's cockpit is built to create maximum driver engagement.",
+      "The Artura is based on the all-new McLaren Carbon Fibre Lightweight Architecture (MCLA). This innovativefoundation hosts the new super-light McLaren V6 twin tubocharged petrol engine. Working inharmony with a power dense, compact E-Motor. The 8-Speed Seamless Shift Gearbox has no need fora heavy, space wasting reverse ratio it uses electric power instead. Innovation flows from nose to tail. Next-generation driver focus. Advanced construction and modern craftsmanship.Innovative technology. Artura's cockpit is built to create maximum driver engagement.",
   },
   {
     id: 1,
