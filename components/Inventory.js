@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FlatList } from "react-native";
 import { ListItem } from "react-native-elements";
 import { CARS } from "../shared/cars";
+import * as Animatable from "react-native-animatable";
 
 class Inventory extends Component {
   constructor(props) {
@@ -18,14 +19,23 @@ class Inventory extends Component {
   render() {
     const { navigate } = this.props.navigation;
     const renderInventoryItem = ({ item }) => {
+      var image =
+        item.id === 0
+          ? require("../assets/images/Artura/2.jpg")
+          : require("../assets/images/Vantage/1.jpg") && item.id === 1
+          ? require("../assets/images/Gemera/1.jpg")
+          : require("../assets/images/Vantage/1.jpg");
+
       return (
-        <ListItem
-          title={item.name}
-          onPress={() => navigate("CarInfo", { carId: item.id })}
-          leftAvatar={{
-            source: item.image && require("../assets/images/Vantage/1.jpg"),
-          }}
-        />
+        <Animatable.View animation="fadeInRightBig" duration={2000}>
+          <ListItem
+            title={item.name}
+            onPress={() => navigate("CarInfo", { carId: item.id })}
+            leftAvatar={{
+              source: image,
+            }}
+          />
+        </Animatable.View>
       );
     };
 
